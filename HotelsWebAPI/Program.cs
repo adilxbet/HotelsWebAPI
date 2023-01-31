@@ -5,6 +5,8 @@
 
 var app = builder.Build();
 
+var hotels = new List<Hotel>();
+
 //if (app.Environment.IsDevelopment())
 //{
 //    app.UseSwagger();
@@ -15,4 +17,15 @@ var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
 
+
+
 app.Run();
+
+
+public class Hotel
+{
+    public int Id { get; set; }
+    public string Name { get; set; } = string.Empty;
+    public double Latitude { get; set; }
+    public double Longitude { get; set; }
+}
